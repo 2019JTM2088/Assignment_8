@@ -1,17 +1,22 @@
 #! /usr/bin/python3
 
-# importing all necessary libraries 
-import random 
-from time import sleep 
+print("'Welcome to the Game!'") 
+# draw a board:
+def draw():
+    board = ''
 
-print("Welcome to the Game!")
+    for i in range(-1,6):
 
-# Creates an empty board 
-def create_board(): 
-    return(np.array([[0, 0, 0], 
-                     [0, 0, 0], 
-                     [0, 0, 0]])) 
-                     
-                     
- # Lets the player type which letter they want to be.                     
-  
+        if i%2==0:
+            board += '|      ' * 4
+            board += '\n|      |      |      |'
+
+        else:
+            board += ' _____ ' * 3
+
+        board += '\n'
+    print (board)
+
+draw()
+
+
