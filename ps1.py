@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 # Python3 program to convert 
 # binary to decimal 
 
@@ -23,9 +24,8 @@ def binaryToDecimal(n):
 # Driver Code 
 print("Enter binary bit data that has to be transmitted.")
 
-num =int(input(),2)
-#num = 10101001; 
-print(binaryToDecimal(num)); 
+num =int(input(),2) 
+binaryToDecimal(num) 
 
 
 
@@ -39,9 +39,22 @@ def getParity( num ):
 
 # Driver program to test getParity() 
 #num = 7
-print ("Parity of no ", num," = ", 
-	( "odd" if getParity(num) else "even")) 
-	
+print ( 
+	( "odd parity" if getParity(num) else "even parity")) 
+
+
+
+
+# Function to convert Decimal number 
+# to Binary number 
+
+def decimalToBinary(num): 
+	return bin(num).replace("0b","") 
+
+# Driver code 
+if __name__ == '__main__': 
+	print(decimalToBinary(num)) 
+
 
 
 
